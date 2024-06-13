@@ -6,7 +6,7 @@ description: Demonstrates how to use the flutter_pos_printer_platform plugin.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 environment:
-  sdk: '>=2.18.4 <3.3.10'
+  sdk: '>=3.1.0 <4.0.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -18,7 +18,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  flutter_pos_printer_platform_image_3:
+  flutter_pos_printer_platform:
     # When depending on this package from a real application you should use:
     #   flutter_pos_printer_platform: ^x.y.z
     # See https://dart.dev/tools/pub/dependencies#version-constraints

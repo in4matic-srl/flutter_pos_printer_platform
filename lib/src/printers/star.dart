@@ -1,13 +1,15 @@
 import 'dart:typed_data';
 
 import 'package:enum_to_string/enum_to_string.dart';
-import 'package:flutter_pos_printer_platform_image_3/printer.dart';
+
+import '/printer.dart';
 // import 'package:flutter_star_prnt/flutter_star_prnt.dart';
 
 enum StarEmulation { StarPRNT, StarLine, StarGraphic }
 
 class StarPrinter extends Printer {
-  StarPrinter({StarEmulation emulation = StarEmulation.StarGraphic, int width = 580}) {
+  StarPrinter(
+      {StarEmulation emulation = StarEmulation.StarGraphic, int width = 580}) {
     this._emulation = EnumToString.convertToString(emulation);
     this._width = width;
   }
@@ -35,7 +37,8 @@ class StarPrinter extends Printer {
   @override
   Future<bool> image(Uint8List bytes, {int threshold = 150}) async {
     if (this._selectedPrinter == null) {
-      throw new Exception("No printer available, please connect before sending.");
+      throw new Exception(
+          "No printer available, please connect before sending.");
     }
     // final commands = PrintCommands();
     // commands.appendBitmapByte(byteData: bytes, width: this._width, diffusion: true, bothScale: true, alignment: StarAlignmentPosition.Center);
